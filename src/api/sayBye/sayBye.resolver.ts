@@ -1,6 +1,14 @@
+import {Greeting ,SayByeQueryArgs} from "../../types/graph";
+
 const resolvers = {
     Query: {
-        sayBye: ():string => { return "say Bye~"; }
+        sayBye: ( _, args : SayByeQueryArgs ):Greeting => {
+            return {
+                text: `Bye! ${args.name}`,
+                error: false
+             }; 
+            
+        }
     }
 }
 
