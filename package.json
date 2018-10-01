@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
+    "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/*.graphql",
+    "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graph.d.ts",
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^10.11.3",
+    "babel-runtime": "^6.26.0",
+    "gql-merge": "^0.0.6",
+    "graphql-to-typescript": "^0.1.2",
     "nodemon": "^1.18.4",
     "ts-node": "^7.0.1",
     "tslint-config-prettier": "^1.15.0",
@@ -18,8 +23,10 @@
   },
   "dependencies": {
     "cors": "^2.8.4",
+    "graphql-tools": "^4.0.0",
     "graphql-yoga": "^1.16.2",
     "helmet": "^3.13.0",
+    "merge-graphql-schemas": "^1.5.7",
     "morgan": "^1.9.1"
   }
 }
