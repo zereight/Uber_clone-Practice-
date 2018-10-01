@@ -1,6 +1,13 @@
+import {Greeting} from "../../types/graph";
+
 const resolvers = {
     Query: {
-        sayHello: ():string => {return  "say Hello"; }
+        sayHello: ():Greeting => {
+            return {
+                text: "say hello",
+                error: false
+            };
+        }
     }
 }
 
