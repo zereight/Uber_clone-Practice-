@@ -25,7 +25,12 @@
     "noImplicitAny": false,                 /* Raise error on expressions and declarations with an implied 'any' type. */
     "strictNullChecks": true,              /* Enable strict null checks. */
     // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
-    // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
+     
+    /* 이거 안해주면 Entiity 데코레이션 부분에서 id!: number 이런식으로 해줘야함*/
+    /*Enable strict checking of property initialization in classes. */
+    /*오류 이름: error TS2564: Property 'name' has no initializer and is not definitely assigned in the constructor*/
+    "strictPropertyInitialization": false,
+    
     "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */
     // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
 
