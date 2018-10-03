@@ -1,1 +1,1 @@
-export type verificationTarget: "PHONE" | "EMAIL";
+export type verificationTarget = "PHONE" | "EMAIL";

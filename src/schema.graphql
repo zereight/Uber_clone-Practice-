@@ -1,3 +1,14 @@
+type Place {
+  id: Int!
+  name: String!
+  lat: Float!
+  lng: Float!
+  address: String!
+  isFav: Boolean!
+  createdAt: String!
+  updatedAt: String
+}
+
 type User {
   id: Int!
   email: String
@@ -7,7 +18,7 @@ type User {
   age: Int
   password: String
   phoneNumber: String
-  verifiedPhoneNumber: Boolean!
+  verifiedPhonenNumber: Boolean!
   profilePhoto: String
   fullName: String
   isDriving: Boolean!
@@ -16,12 +27,12 @@ type User {
   lastLng: Float
   lastLat: Float
   lastOrientation: Float
-  createAt: String!
-  updateAt: String
+  createdAt: String!
+  updatedAt: String
 }
 
 type Query {
-  user: User!
+  user: User
 }
 
 type Verification {
@@ -30,6 +41,6 @@ type Verification {
   payload: String!
   key: String!
   used: Boolean!
-  createAt: String!
-  updateAt: String
+  createdAt: String!
+  updatedAt: String
 }
