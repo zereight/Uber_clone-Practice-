@@ -44,6 +44,16 @@ type Ride {
   updateAt: String
 }
 
+type FacebookConnectResponse {
+  ok: Boolean!
+  error: String
+  token: String
+}
+
+type Mutation {
+  FacebookConnect(firstName: String!, lastName: String!, email: String, fbId: String!): FacebookConnectResponse!
+}
+
 type User {
   id: Int!
   email: String
@@ -67,6 +77,7 @@ type User {
   verifications: [Verification]
   rideAsPassenger: [Ride]
   rideAsDriver: [Ride]
+  fbId: String
   createdAt: String!
   updatedAt: String
 }

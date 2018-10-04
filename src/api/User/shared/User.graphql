@@ -24,6 +24,8 @@ type User {
   rideAsPassenger: [Ride]
   rideAsDriver: [Ride]
   
+  fbId: String
+  
   createdAt: String!
   updatedAt: String
 }
