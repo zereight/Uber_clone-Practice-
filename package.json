@@ -1,13 +1,10 @@
 {
-  "name": "nuber-server",
+  "name": "v3",
   "version": "1.0.0",
-  "description": "Server for the (N)Uber Clone Course on Nomad Academy. GraphQL, Typescript, NodeJS",
+
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nomadcoders/nuber-server.git"
-  },
-  "author": "Nicolás Serrano Arévalo <itnico.las.me@gmail.com>",
+
+  "author": "kim",
   "license": "MIT",
   "devDependencies": {
     "@types/bcrypt": "^2.0.0",
@@ -38,9 +35,5 @@
     "morgan": "^1.9.0",
     "pg": "^7.4.3",
     "typeorm": "^0.2.7"
-  },
-  "bugs": {
-    "url": "https://github.com/nomadcoders/nuber-server/issues"
-  },
-  "homepage": "https://github.com/nomadcoders/nuber-server#readme"
+  }
 }
